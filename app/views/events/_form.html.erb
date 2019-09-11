@@ -1,0 +1,9 @@
+<%= simple_form_for (@event) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :start_date, label: "Start date and time", order: [:day, :month, :year] %>
+  <%= f.input :end_date, label: "End date and time", order: [:day, :month, :year] %>
+
+  <%= f.button :submit, "Submit", class: "btn btn-primary" %>
+<% end %>
